@@ -64,7 +64,7 @@ function plugin:access(plugin_conf)
 
   -- your custom code here
   kong.log.inspect(plugin_conf)   -- check the logs for a pretty-printed config!
-  ngx.req.set_header(plugin_conf.request_header, "this is on a request")
+  ngx.req.set_header(plugin_conf.request_header, "this is on a request from yyl")
 
 end --]]
 
@@ -73,7 +73,7 @@ end --]]
 function plugin:header_filter(plugin_conf)
 
   -- your custom code here, for example;
-  ngx.header[plugin_conf.response_header] = "this is on the response"
+  ngx.header[plugin_conf.response_header] = "this is on the response from yyl"
 
 end --]]
 
